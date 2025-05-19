@@ -1429,6 +1429,35 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
+"@parcel/watcher-darwin-arm64@2.5.1":
+  "integrity" "sha512-eAzPv5osDmZyBhou8PoF4i6RQXAfeKL9tjb3QzYuccXFMQU0ruIc/POh30ePnaOyD1UXdlKguHBmsTs53tVoPw=="
+  "resolved" "https://registry.npmjs.org/@parcel/watcher-darwin-arm64/-/watcher-darwin-arm64-2.5.1.tgz"
+  "version" "2.5.1"
+
+"@parcel/watcher@^2.4.1":
+  "integrity" "sha512-dfUnCxiN9H4ap84DvD2ubjw+3vUNpstxa0TneY/Paat8a3R4uQZDLSvWjmznAY/DoahqTHl9V46HF/Zs3F29pg=="
+  "resolved" "https://registry.npmjs.org/@parcel/watcher/-/watcher-2.5.1.tgz"
+  "version" "2.5.1"
+  dependencies:
+    "detect-libc" "^1.0.3"
+    "is-glob" "^4.0.3"
+    "micromatch" "^4.0.5"
+    "node-addon-api" "^7.0.0"
+  optionalDependencies:
+    "@parcel/watcher-android-arm64" "2.5.1"
+    "@parcel/watcher-darwin-arm64" "2.5.1"
+    "@parcel/watcher-darwin-x64" "2.5.1"
+    "@parcel/watcher-freebsd-x64" "2.5.1"
+    "@parcel/watcher-linux-arm-glibc" "2.5.1"
+    "@parcel/watcher-linux-arm-musl" "2.5.1"
+    "@parcel/watcher-linux-arm64-glibc" "2.5.1"
+    "@parcel/watcher-linux-arm64-musl" "2.5.1"
+    "@parcel/watcher-linux-x64-glibc" "2.5.1"
+    "@parcel/watcher-linux-x64-musl" "2.5.1"
+    "@parcel/watcher-win32-arm64" "2.5.1"
+    "@parcel/watcher-win32-ia32" "2.5.1"
+    "@parcel/watcher-win32-x64" "2.5.1"
+
 "@simple-dom/interface@^1.4.0":
   "integrity" "sha512-l5qumKFWU0S+4ZzMaLXFU8tQZsicHEMEyAxI5kDFGhJsRqDwe0a7/iPA/GdxlGyDKseQQAgIz5kzU7eXTrlSpA=="
   "resolved" "https://registry.npmjs.org/@simple-dom/interface/-/interface-1.4.0.tgz"
@@ -3366,6 +3395,15 @@
     "symlink-or-copy" "^1.2.0"
     "walk-sync" "^2.2.0"
 
+"broccoli-sass-source-maps@^4.0.0":
+  "integrity" "sha512-t/YEueiFAOboCERQsH6J9RmifEDkqkoFjIB6owIeilpSbhJbNXj0FfzWcXnG/ahKYByHE4g3H7agHr2mtlJdDw=="
+  "resolved" "https://registry.npmjs.org/broccoli-sass-source-maps/-/broccoli-sass-source-maps-4.3.0.tgz"
+  "version" "4.3.0"
+  dependencies:
+    "broccoli-caching-writer" "^3.0.3"
+    "include-path-searcher" "^0.1.0"
+    "rsvp" "^4.8.5"
+
 "broccoli-slow-trees@^3.0.1", "broccoli-slow-trees@^3.1.0":
   "integrity" "sha512-FRI7mRTk2wjIDrdNJd6znS7Kmmne4VkAkl8Ix1R/VoePFMD0g0tEl671xswzFqaRjpT9Qu+CC4hdXDLDJBuzMw=="
   "resolved" "https://registry.npmjs.org/broccoli-slow-trees/-/broccoli-slow-trees-3.1.0.tgz"
@@ -3816,6 +3854,13 @@
     "readdirp" "~3.6.0"
   optionalDependencies:
     "fsevents" "~2.3.2"
+
+"chokidar@^4.0.0":
+  "integrity" "sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA=="
+  "resolved" "https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz"
+  "version" "4.0.3"
+  dependencies:
+    "readdirp" "^4.0.1"
 
 "chownr@^1.1.1":
   "integrity" "sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg=="
@@ -4568,6 +4613,11 @@
   "resolved" "https://registry.npmjs.org/detect-indent/-/detect-indent-6.1.0.tgz"
   "version" "6.1.0"
 
+"detect-libc@^1.0.3":
+  "integrity" "sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg=="
+  "resolved" "https://registry.npmjs.org/detect-libc/-/detect-libc-1.0.3.tgz"
+  "version" "1.0.3"
+
 "detect-newline@3.1.0":
   "integrity" "sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA=="
   "resolved" "https://registry.npmjs.org/detect-newline/-/detect-newline-3.1.0.tgz"
@@ -4898,6 +4948,16 @@
     "debug" "^3.0.1"
     "process-relative-require" "^1.0.0"
 
+"ember-cli-sass@^11.0.1":
+  "integrity" "sha512-RMlFPMK4kaB+67seF/IIoY3EC4rRd+L58q+lyElrxB3FcQTgph/qmGwtqf9Up7m3SDbPiA7cccCOSmgReMgCXA=="
+  "resolved" "https://registry.npmjs.org/ember-cli-sass/-/ember-cli-sass-11.0.1.tgz"
+  "version" "11.0.1"
+  dependencies:
+    "broccoli-funnel" "^2.0.1"
+    "broccoli-merge-trees" "^3.0.1"
+    "broccoli-sass-source-maps" "^4.0.0"
+    "ember-cli-version-checker" "^2.1.0"
+
 "ember-cli-sri@^2.1.1":
   "integrity" "sha512-YG/lojDxkur9Bnskt7xB6gUOtJ6aPl/+JyGYm9HNDk3GECVHB3SMN3rlGhDKHa1ndS5NK2W2TSLb9bzRbGlMdg=="
   "resolved" "https://registry.npmjs.org/ember-cli-sri/-/ember-cli-sri-2.1.1.tgz"
@@ -5005,6 +5065,14 @@
     "semver" "^6.0.0"
     "stagehand" "^1.0.0"
     "walk-sync" "^2.0.0"
+
+"ember-cli-version-checker@^2.1.0":
+  "integrity" "sha512-G+KtYIVlSOWGcNaTFHk76xR4GdzDLzAS4uxZUKdASuFX0KJE43C6DaqL+y3VTpUFLI2FIkAS6HZ4I1YBi+S3hg=="
+  "resolved" "https://registry.npmjs.org/ember-cli-version-checker/-/ember-cli-version-checker-2.2.0.tgz"
+  "version" "2.2.0"
+  dependencies:
+    "resolve" "^1.3.3"
+    "semver" "^5.3.0"
 
 "ember-cli-version-checker@^3.1.3":
   "integrity" "sha512-PZNSvpzwWgv68hcXxyjREpj3WWb81A7rtYNQq1lLEgrWIchF8ApKJjWP3NBpHjaatwILkZAV8klair5WFlXAKg=="
@@ -7143,6 +7211,11 @@
   "resolved" "https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz"
   "version" "5.3.2"
 
+"immutable@^5.0.2":
+  "integrity" "sha512-qHKXW1q6liAk1Oys6umoaZbDRqjcjgSrbnrifHsfsttza7zcvRAsL7mMV6xWcyhwQy7Xj5v4hhbr6b+iDYwlmQ=="
+  "resolved" "https://registry.npmjs.org/immutable/-/immutable-5.1.2.tgz"
+  "version" "5.1.2"
+
 "import-fresh@^3.0.0", "import-fresh@^3.2.1":
   "integrity" "sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ=="
   "resolved" "https://registry.npmjs.org/import-fresh/-/import-fresh-3.3.1.tgz"
@@ -7155,6 +7228,11 @@
   "integrity" "sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA=="
   "resolved" "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
   "version" "0.1.4"
+
+"include-path-searcher@^0.1.0":
+  "integrity" "sha512-KlpXnsZOrBGo4PPKqPFi3Ft6dcRyh8fTaqgzqDRi8jKAsngJEWWOxeFIWC8EfZtXKaZqlsNf9XRwcQ49DVgl/g=="
+  "resolved" "https://registry.npmjs.org/include-path-searcher/-/include-path-searcher-0.1.0.tgz"
+  "version" "0.1.0"
 
 "infer-owner@^1.0.3":
   "integrity" "sha512-IClj+Xz94+d7irH5qRyfJonOdfTzuDaifE6ZPWfx0N0+/ATZCbuTPq2prFl526urkQd90WyUKIh1DfBQ2hMz9A=="
@@ -8665,6 +8743,11 @@
     "lower-case" "^2.0.2"
     "tslib" "^2.0.3"
 
+"node-addon-api@^7.0.0":
+  "integrity" "sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ=="
+  "resolved" "https://registry.npmjs.org/node-addon-api/-/node-addon-api-7.1.1.tgz"
+  "version" "7.1.1"
+
 "node-fetch@^2.6.0", "node-fetch@^2.6.1":
   "integrity" "sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A=="
   "resolved" "https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz"
@@ -9687,6 +9770,11 @@
     "micromatch" "^3.1.10"
     "readable-stream" "^2.0.2"
 
+"readdirp@^4.0.1":
+  "integrity" "sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg=="
+  "resolved" "https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz"
+  "version" "4.1.2"
+
 "readdirp@~3.6.0":
   "integrity" "sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA=="
   "resolved" "https://registry.npmjs.org/readdirp/-/readdirp-3.6.0.tgz"
@@ -9933,7 +10021,7 @@
   "resolved" "https://registry.npmjs.org/resolve.exports/-/resolve.exports-2.0.3.tgz"
   "version" "2.0.3"
 
-"resolve@^1.10.0", "resolve@^1.10.1", "resolve@^1.11.1", "resolve@^1.12.0", "resolve@^1.13.1", "resolve@^1.14.2", "resolve@^1.17.0", "resolve@^1.20.0", "resolve@^1.22.0", "resolve@^1.22.1", "resolve@^1.4.0", "resolve@^1.5.0":
+"resolve@^1.10.0", "resolve@^1.10.1", "resolve@^1.11.1", "resolve@^1.12.0", "resolve@^1.13.1", "resolve@^1.14.2", "resolve@^1.17.0", "resolve@^1.20.0", "resolve@^1.22.0", "resolve@^1.22.1", "resolve@^1.3.3", "resolve@^1.4.0", "resolve@^1.5.0":
   "integrity" "sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w=="
   "resolved" "https://registry.npmjs.org/resolve/-/resolve-1.22.10.tgz"
   "version" "1.22.10"
@@ -10200,6 +10288,17 @@
     "micromatch" "^4.0.2"
     "minimist" "^1.1.1"
     "walker" "~1.0.5"
+
+"sass@^1.89.0":
+  "integrity" "sha512-ld+kQU8YTdGNjOLfRWBzewJpU5cwEv/h5yyqlSeJcj6Yh8U4TDA9UA5FPicqDz/xgRPWRSYIQNiFks21TbA9KQ=="
+  "resolved" "https://registry.npmjs.org/sass/-/sass-1.89.0.tgz"
+  "version" "1.89.0"
+  dependencies:
+    "chokidar" "^4.0.0"
+    "immutable" "^5.0.2"
+    "source-map-js" ">=0.6.2 <2.0.0"
+  optionalDependencies:
+    "@parcel/watcher" "^2.4.1"
 
 "schema-utils@^1.0.0":
   "integrity" "sha512-i27Mic4KovM/lnGsy8whRCHhc7VicJajAjTrYg11K9zfZXnYIt4k5F+kZkwjnrhKzLic/HLU4j11mjsz2G/75g=="
@@ -10604,7 +10703,7 @@
   "resolved" "https://registry.npmjs.org/source-list-map/-/source-list-map-2.0.1.tgz"
   "version" "2.0.1"
 
-"source-map-js@^1.0.1", "source-map-js@^1.2.1":
+"source-map-js@^1.0.1", "source-map-js@^1.2.1", "source-map-js@>=0.6.2 <2.0.0":
   "integrity" "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="
   "resolved" "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz"
   "version" "1.2.1"
