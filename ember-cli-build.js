@@ -7,6 +7,9 @@ module.exports = function (defaults) {
     sassOptions: {
       extension: 'scss',
     },
+    cssModules: {
+      extension: 'scss',
+    },
   });
 
   return app.toTree();

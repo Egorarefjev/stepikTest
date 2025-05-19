@@ -1,7 +1,7 @@
-<div class="index-page">
+<div class="wrapper">
   <div>Выбери квиз</div>
 
-  <div class="quiz-list">
+  <div local-class="quiz-list">
     {{#each this.quizzes as |quiz|}}
       <QuizCard::Item
         @name={{quiz.name}}
