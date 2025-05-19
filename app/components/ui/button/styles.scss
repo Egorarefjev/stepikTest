@@ -1,0 +1,35 @@
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacer-xs) var(--spacer-m);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease;
+}
+
+.primary {
+  background-color: var(--secondary);
+  color: var(--primary);
+
+  &:hover:not(:disabled) {
+    background-color: var(--secondary-lighten);
+  }
+}
+
+.secondary {
+  background-color: var(--primary);
+  color: var(--secondary);
+
+  &:hover:not(:disabled) {
+    background-color: var(--primary-lighten);
+  }
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

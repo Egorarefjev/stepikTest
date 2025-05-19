@@ -1,0 +1,8 @@
+<label local-class="checkbox">
+  <input
+    type="checkbox"
+    checked={{@isChecked}}
+    {{on "change" this.handleChange}}
+  />
+  <span>{{@label}}</span>
+</label>

@@ -1,0 +1,9 @@
+<button
+  type="button"
+  local-class="{{this.type}}"
+  disabled={{this.isDisabled}}
+  {{on "click" this.handleClick}}
+  ...attributes
+>
+  {{yield}}
+</button>

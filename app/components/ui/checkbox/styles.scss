@@ -1,0 +1,19 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacer-s);
+  padding: var(--spacer-xs);
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+
+  input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #333;
+  }
+
+  span {
+    font-weight: 500;
+  }
+}
