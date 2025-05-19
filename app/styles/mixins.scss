@@ -1,0 +1,95 @@
+$bs-breakpoint-xs: 0px;
+$bs-breakpoint-sm: 576px;
+$bs-breakpoint-md: 768px;
+$bs-breakpoint-lg: 992px;
+$bs-breakpoint-xl: 1200px;
+$bs-breakpoint-xxl: 1400px;
+
+
+@mixin screen-xs-max() {
+  @media screen and (max-width: $bs-breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin screen-xs-max() {
+  @media screen and (max-width: $bs-breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin screen-sm-max() {
+  @media screen and (max-width: $bs-breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin screen-md-max() {
+  @media screen and (max-width: $bs-breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin screen-lg-max() {
+  @media screen and (max-width: $bs-breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin screen-xl-max() {
+  @media screen and (max-width: $bs-breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin screen-xxl-max() {
+  @media screen and (max-width: $bs-breakpoint-xxl) {
+    @content;
+  }
+}
+
+
+// =======
+
+
+@mixin screen-xs-min() {
+  @media screen and (min-width: $bs-breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin screen-xs-min() {
+  @media screen and (min-width: $bs-breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin screen-sm-min() {
+  @media screen and (min-width: $bs-breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin screen-md-min() {
+  @media screen and (min-width: $bs-breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin screen-lg-min() {
+  @media screen and (min-width: $bs-breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin screen-xl-min() {
+  @media screen and (min-width: $bs-breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin screen-xxl-min() {
+  @media screen and (min-width: $bs-breakpoint-xxl) {
+    @content;
+  }
+}

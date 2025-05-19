@@ -1,5 +1,4 @@
-$primary-color: #009688;
-
-.quiz-form {
-  border: 1px solid $primary-color;
-}
+@import 'pages/index';
+@import 'components/quiz-card';
+@import "variables";
+@import "mixins";
