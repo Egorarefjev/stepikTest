@@ -12,13 +12,4 @@ export default class UiButtonComponent extends Component {
   get isDisabled() {
     return this.args.disabled ?? false;
   }
-
-  @action
-  handleClick(event) {
-    if (!this.isDisabled && typeof this.args.onClick === 'function') {
-      this.args.onClick(event);
-    } else {
-      console.error('problem with UiButtonComponent')
-    }
-  }
 }

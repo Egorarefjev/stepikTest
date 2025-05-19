@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="Добавил сервис для работы с квизом, добавил фейковую дату">
-      <change afterPath="$PROJECT_DIR$/app/components/ui/button/component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ui/button/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ui/button/template.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ui/checkbox/component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ui/checkbox/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ui/checkbox/template.hbs" afterDir="false" />
+    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="добавил компоненты ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/quiz/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/quiz/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/quiz/template.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/template.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/quiz-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/quiz-manager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1747677778548</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="добавил компоненты ui">
+      <created>1747679570514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747679570514</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +146,7 @@
     <MESSAGE value="the config has been configured" />
     <MESSAGE value="- изолировал стили" />
     <MESSAGE value="Добавил сервис для работы с квизом, добавил фейковую дату" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил сервис для работы с квизом, добавил фейковую дату" />
+    <MESSAGE value="добавил компоненты ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил компоненты ui" />
   </component>
 </project>
