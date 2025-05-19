@@ -1,14 +1,9 @@
 import Route from '@ember/routing/route';
-import { tracked } from "@glimmer/tracking";
-import { inject as service } from '@ember/service';
-
+import {ROUTE_QUIZ} from "../../../helpers/routes";
 
 export default class QuizResultRoute extends Route {
 
-  @service
-  quizManager;
-
-  async model() {
-
+  model() {
+    return this.modelFor(ROUTE_QUIZ);
   }
 }

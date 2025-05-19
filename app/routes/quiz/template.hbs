@@ -1,18 +1,18 @@
-<section class="quiz">
+<section local-class="quiz">
   <div class="quiz__title">{{this.name}}</div>
 
-  <div class="quiz__form" >
+  <div local-class="quiz__form" >
     {{#each this.questions as |question index|}}
-      <div class="quiz__question">
-        <p class="quiz__question-title">{{question.text}}</p>
+      <div local-class="quiz__question">
+        <p local-class="quiz__question-title">{{question.text}}</p>
 
-        <div class="quiz__options">
+        <div local-class="quiz__options">
           {{#each question.choices as |choice|}}
             <Ui::Checkbox
               @checked={{true}}
               @onChange={{fn this.onToggleAnswer question.id choice}}
               @label={{choice}}
-              class="quiz__option"
+              local-class="quiz__option"
             />
           {{/each}}
         </div>
@@ -24,3 +24,5 @@
     </Ui::Button>
   </div>
 </section>
+
+{{outlet}}

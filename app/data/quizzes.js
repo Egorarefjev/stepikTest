@@ -78,3 +78,21 @@ export const quizzesFromServer = [
     ]
   }
 ];
+
+export const quizCorrectAnswers = {
+  'quiz-1': {
+    'q-1-1': ['"object"'],
+    'q-1-2': ['const'],
+    'q-1-3': ['Не число']
+  },
+  'quiz-2': {
+    'q-2-1': ['<h1>'],
+    'q-2-2': ['Смысловую группу контента'],
+    'q-2-3': ['<a>']
+  },
+  'quiz-3': {
+    'q-3-1': ['font-size'],
+    'q-3-2': ['#main'],
+    'q-3-3': ['background-color']
+  }
+};

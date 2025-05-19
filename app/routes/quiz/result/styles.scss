@@ -1,1 +1,42 @@
+.quiz-results {
+  padding: var(--spacer-xl);
 
+  &__title {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacer-l);
+    font-weight: bold;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacer-xl);
+  }
+
+  &__item {
+    padding: var(--spacer-m);
+    margin-bottom: var(--spacer-m);
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: var(--spacer-xs);
+    background-color: var(--bg-light, #f9f9f9);
+  }
+
+  &__status {
+    margin-top: var(--spacer-xs);
+    font-weight: bold;
+
+    &--correct {
+      color: var(--success-color, green);
+    }
+
+    &--wrong {
+      color: var(--danger-color, red);
+    }
+  }
+
+  &__summary {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}

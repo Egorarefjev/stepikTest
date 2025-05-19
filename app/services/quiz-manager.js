@@ -1,7 +1,7 @@
 import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
-import { quizzesFromServer } from "../data/quizzes";
+import { quizzesFromServer, quizCorrectAnswers } from "../data/quizzes";
 
 export default class QuizManagerService extends Service {
 
@@ -71,6 +71,22 @@ export default class QuizManagerService extends Service {
   @action
   clear() {
     this.answers = new Map();
+  }
+
+  /**
+   * Проверка, верен ли ответ пользователя на вопрос
+   * @param {string} quizId
+   * @param {string} questionId
+   * @returns {boolean}
+   */
+  isCorrectAnswer(quizId, questionId) {
+    const correctAnswer = quizCorrectAnswers[quizId]?.[questionId] ?? [];
+    const userAnswer = this.answers.get(questionId) ?? new Set();
+
+    return (
+      correctAnswer.length === userAnswer.size &&
+      correctAnswer.every((c) => userAnswer.has(c))
+    );
   }
 }
 

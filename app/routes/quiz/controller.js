@@ -1,8 +1,7 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
-import { tracked } from "@glimmer/tracking";
-import {ROUTE_QUIZ} from "../../helpers/routes";
+import { ROUTE_QUIZ_RESULT } from "../../helpers/routes";
 
 export default class QuizController extends Controller {
 
@@ -31,6 +30,6 @@ export default class QuizController extends Controller {
 
   @action
   submitAnswer() {
-    this.router.transitionTo(ROUTE_QUIZ, id);
+    this.router.transitionTo(ROUTE_QUIZ_RESULT);
   }
 }
