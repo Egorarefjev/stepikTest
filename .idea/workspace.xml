@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="the config has been configured">
-      <change afterPath="$PROJECT_DIR$/app/index/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="- изолировал стили">
+      <change afterPath="$PROJECT_DIR$/app/routes/quiz/controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/quiz/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/quiz/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/quiz/template.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/quiz-manager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/quiz-card/item.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/quiz-card/item.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/index/route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/components/_quiz-card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/quiz-card/item.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/pages/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/pages/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/index/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ember-cli-build.js" beforeDir="false" afterPath="$PROJECT_DIR$/ember-cli-build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/quiz-card/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/quiz-card/item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/quizzes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index/template.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index/template.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -72,7 +72,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/egorarefev/WebstormProjects/stepikTest/app/index",
+    "last_opened_file_path": "/Users/egorarefev/WebstormProjects/stepikTest/app/flow",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -86,10 +86,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/flow" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/index/quiz" />
       <recent name="$PROJECT_DIR$/app/index" />
       <recent name="$PROJECT_DIR$/app/styles" />
-      <recent name="$PROJECT_DIR$/app/components/quiz-card" />
-      <recent name="$PROJECT_DIR$/app/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/index" />
@@ -112,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1747645873208</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- изолировал стили">
+      <created>1747653344511</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747653344511</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="the config has been configured" />
-    <option name="LAST_COMMIT_MESSAGE" value="the config has been configured" />
+    <MESSAGE value="- изолировал стили" />
+    <option name="LAST_COMMIT_MESSAGE" value="- изолировал стили" />
   </component>
 </project>

@@ -13,10 +13,10 @@ export default class QuizCardComponent extends Component {
 
   @action
   onOpenQuiz(id) {
-    if (typeof this.args.onClickAction === 'function' && id) {
-      this.args.onClickAction(id);
+    if (typeof this.args.onOpenQuizAction === 'function' && id) {
+      this.args.onOpenQuizAction(id);
     } else {
-      console.error('QuizCardComponent have problem whith onClick');
+      console.error('QuizCardComponent have problem whith onOpenQuiz');
     }
   }
 }
