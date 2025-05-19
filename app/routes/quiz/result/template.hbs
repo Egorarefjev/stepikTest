@@ -1,22 +1,22 @@
-<section class="quiz-results">
-  <div class="quiz-results__title">Результаты</div>
+<section local-class="quiz-results">
+  <div local-class="quiz-results__title">Результаты</div>
 
-  <ul class="quiz-results__list">
-    {{#each this.resultData as |item|}}
-      <li class="quiz-results__item">
+  <ul local-class="quiz-results__list">
+    {{#each this.result as |item|}}
+      <li local-class="quiz-results__item">
         <p><strong>{{item.question}}</strong></p>
         <p>Твой ответ: {{item.userAnswer}}</p>
         <p>Правильный ответ: {{item.correctAnswer}}</p>
         {{#if item.isCorrect}}
-          <p class="quiz-results__status quiz-results__status--correct">✔ Верно</p>
+          <p local-class="quiz-results__status quiz-results__status--correct">✔ Верно</p>
         {{else}}
-          <p class="quiz-results__status quiz-results__status--wrong">✖ Неверно</p>
+          <p local-class="quiz-results__status quiz-results__status--wrong">✖ Неверно</p>
         {{/if}}
       </li>
     {{/each}}
   </ul>
 
-  <p class="quiz-results__summary">
-    Правильных ответов: {{this.correctCount}} из {{this.resultData.length}}
+  <p local-class="quiz-results__summary">
+    Правильных ответов: {{this.correctCount}} из {{this.result.length}}
   </p>
 </section>
