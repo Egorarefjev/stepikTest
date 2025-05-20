@@ -4,26 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="Добавлена проверка ответов">
+    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="refactor">
+      <change afterPath="$PROJECT_DIR$/app/components/ui/loader/component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/ui/loader/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/ui/loader/template.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/loading.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/index/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/index/template.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index/template.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/quiz/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/quiz/result/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/result/controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/quiz/result/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/result/route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/quiz/result/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/result/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/quiz/result/template.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/result/template.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/quiz/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/quiz/template.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/template.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/results/controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/results/route.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/results/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/results/template.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/quiz-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/quiz-manager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/environment.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/egorarefev/WebstormProjects/stepikTest/app/routes/quiz/result",
+    "last_opened_file_path": "/Users/egorarefev/WebstormProjects/stepikTest/app/components/ui/loader",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
@@ -93,13 +81,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components/ui/loader" />
       <recent name="$PROJECT_DIR$/app/routes/quiz/result" />
       <recent name="$PROJECT_DIR$/app/routes/result" />
       <recent name="$PROJECT_DIR$/app/components/ui/button" />
       <recent name="$PROJECT_DIR$/app/components/ui/checkbox" />
-      <recent name="$PROJECT_DIR$/app/flow" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates" />
       <recent name="$PROJECT_DIR$/app/index" />
     </key>
   </component>
@@ -155,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1747684225967</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactor">
+      <created>1747731877025</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747731877025</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +175,8 @@
     <MESSAGE value="добавил компоненты ui" />
     <MESSAGE value="Добавлены страницы результата + первичная форма проверки" />
     <MESSAGE value="Добавлена проверка ответов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена проверка ответов" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

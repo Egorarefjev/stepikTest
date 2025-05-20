@@ -11,10 +11,6 @@ export default class QuizController extends Controller {
   @service
   quizManager;
 
-  get selectedAnswers() {
-    return this.quizManager.answers;
-  }
-
   get name() {
     return this.model.quiz?.name ?? '';
   }
