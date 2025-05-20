@@ -1,0 +1,15 @@
+.quiz-card {
+  border: 1px solid var(--black);
+  padding: var(--spacer-m);
+  border-radius: var(--border-radius-xs);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-lighten);
+  }
+
+  h2 {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-semibold);
+  }
+}

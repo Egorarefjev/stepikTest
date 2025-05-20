@@ -1,0 +1,45 @@
+<section local-class="quiz-results" {{did-insert this.loadResult}}>
+  <div class="page-title">Результаты</div>
+  {{#if this.result}}
+    <ul local-class="quiz-results__list">
+      {{#each this.result as |item|}}
+        <li local-class="quiz-results__item">
+          <p><strong>{{item.question}}</strong></p>
+          <p>Твой ответ: {{if item.userAnswer item.userAnswer 'Ты ничего не ответил'}}</p>
+          {{#if item.isCorrect}}
+            <p local-class="quiz-results__status quiz-results__status--correct">✔ Верно</p>
+          {{else}}
+            <p local-class="quiz-results__status quiz-results__status--wrong">✖ Неверно</p>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+
+    <p local-class="quiz-results__summary">
+      Правильных ответов: {{this.correctCount}} из {{this.result.length}}
+    </p>
+  {{else}}
+    <div local-class="quiz-results__empty">
+      Ваши результаты не найдены
+    </div>
+  {{/if}}
+
+
+
+  <div local-class="quiz-results__buttons">
+    <Ui::Button
+      local-class="quiz-results__button"
+      @type="primary"
+      {{on 'click' this.onClickRestartTest}}
+    >
+      Попробовать еще раз
+    </Ui::Button>
+    <Ui::Button
+      local-class="quiz-results__button"
+      @type="secondary"
+      {{on 'click' this.onClickGoToListQuizzes}}
+    >
+      Вернуться к списку
+    </Ui::Button>
+  </div>
+</section>

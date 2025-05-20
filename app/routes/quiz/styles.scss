@@ -1,0 +1,29 @@
+.quiz__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-l);
+}
+
+.quiz__question {
+  border-bottom: 1px solid var(--primary-lighten);
+  padding-bottom: var(--spacer-m);
+}
+
+.quiz__question-title {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacer-s);
+}
+
+.quiz__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-xs);
+}
+
+.quiz__option {
+  padding-left: var(--spacer-s);
+}
+
+.quiz__submit {
+  align-self: flex-start;
+}

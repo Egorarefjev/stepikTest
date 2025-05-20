@@ -1,0 +1,79 @@
+$bs-breakpoint-xs: 0px;
+$bs-breakpoint-sm: 576px;
+$bs-breakpoint-md: 768px;
+$bs-breakpoint-lg: 992px;
+$bs-breakpoint-xl: 1200px;
+$bs-breakpoint-xxl: 1400px;
+
+:root {
+  /* ============================================================ Breakpoints */
+
+  --bs-breakpoint-xs: 0px;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+
+  /* =============================================================== Spacings */
+
+  --spacer-3xs: 0.125rem; /* 2px */
+  --spacer-2xs: 0.25rem; /* 4px */
+  --spacer-xs: 0.5rem; /* 8px */
+  --spacer-s: 0.75rem; /* 12px */
+  --spacer-m: 1rem; /* 16px */
+  --spacer-l: 1.5rem; /* 24px */
+  --spacer-xl: 2rem; /* 32px */
+  --spacer-2xl: 2.5rem; /* 40px */
+  --spacer-3xl: 3rem; /* 48px */
+  --spacer-4xl: 4rem; /* 64px */
+  --spacer-5xl: 7.5rem; /* 120px */
+  --spacer-auto: auto;
+
+  /* =================================================================== Font */
+
+  --font-family-base: Inter, Helvetica, Arial, apple-system, sans-serif;
+  --font-family-mono: 'JetBrains Mono';
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-2xs: 0.5rem; /* 8px */
+  --font-size-xs: 0.625rem; /* 10px */
+  --font-size-s: 0.75rem; /* 12px */
+  --font-size-m: 0.875rem; /* 14px */
+  --font-size-l: 1rem; /* 16px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.625rem; /* 26px */
+  --font-size-4xl: 2.25rem; /* 36px */
+
+  /* ========================================================== Border Radius */
+
+  --border-radius-3xs: 0.125rem; /* 2px */
+  --border-radius-2xs: 0.25rem; /* 4px */
+  --border-radius-xs: 0.5rem; /* 8px */
+  --border-radius-s: 0.75rem; /* 12px */
+  --border-radius-m: 1rem; /* 16px */
+  --border-radius-l: 1.25rem; /* 20px */
+  --border-radius-xl: 1.5rem; /* 24px */
+  --border-radius-2xl: 2rem; /* 32px */
+
+  /* ================================================================= Colors */
+
+  --primary-lighten: hsla(217, 91%, 77%, 1);
+  --primary: hsla(217, 91%, 65%, 1); // primary
+  --primary-darken: hsla(217, 91%, 55%, 1); // primary-darken
+  --secondary-lighten: hsla(213, 100%, 98%, 1);
+  --secondary: hsla(216, 93%, 95%, 1);
+  --secondary-darken: hsla(217, 90%, 88%, 1);
+
+  --system-color-success: hsla(144, 96%, 36%, 1);
+  --system-color-danger: hsla(14, 87%, 49%, 1);
+
+  --white: #fff; // white
+  --black: #000;
+
+}

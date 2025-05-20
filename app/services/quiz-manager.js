@@ -1,0 +1,151 @@
+import Service from '@ember/service';
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
+import { quizzesFromServer, quizCorrectAnswers } from "../data/quizzes";
+
+const ROUTE_QUIZ_WORKER = '/workers/quiz-checker.js';
+
+export default class QuizManagerService extends Service {
+
+  @tracked quizzes;
+  @tracked answers = new Map();
+
+  /**
+   * Возвращает подробный квиз с вопросами и вариантами
+   * @returns {array<object>}
+   */
+  @action
+  getQuizzes() {
+    //тут должен быть метод получения списка квизов и присваивания результата в this.quizzes
+    //так же при сложных трансформациях лучше сделать отдельный класс (доменную модель)
+    // и map'ом создавать новые экземпляры
+    this.quizzes = quizzesFromServer?.map(({ id, name, description }) => ({
+      id,
+      name,
+      description
+    }));
+
+    return this.quizzes;
+  }
+
+  /**
+   * Возвращает подробный квиз с вопросами и вариантами
+   * @param {string} id
+   * @returns {Object|null}
+   */
+  @action
+  getQuizById(id) {
+    //тут должен быть метод получения подробной информации о квизе по его id, в том числе список вопросов
+    return quizzesFromServer?.find((quiz) => quiz.id === id) ?? null;
+  }
+
+
+  /**
+   * Переключает выбор для конкретного вопроса и варианта.
+   * @param {string|number} questionId
+   * @param {string|number} choiceId
+   */
+  @action
+  choiceAnswer(questionId, choice) {
+    const current = this.answers.get(questionId) || new Set();
+
+    if (current.has(choice)) {
+      current.delete(choice);
+    } else {
+      current.add(choice);
+    }
+
+    // триггерим tracked реактивность
+    this.answers = new Map(this.answers.set(questionId, current));
+  }
+
+  /**
+   * Проверка, выбран ли конкретный вариант.
+   */
+  @action
+  isSelected(questionId, choice) {
+    return this.answers.get(questionId)?.has(choice) ?? false;
+  }
+
+  /**
+   * Очистка всех ответов (например, при отправке или выходе).
+   */
+  @action
+  clear() {
+    this.answers = new Map();
+  }
+
+  /**
+   * Проверка, верен ли ответ пользователя на вопрос
+   * @param {string} quizId
+   * @param {string} questionId
+   * @returns {boolean}
+   */
+  @action
+  isCorrectAnswer(quizId, questionId) {
+    const correctAnswer = quizCorrectAnswers[quizId]?.[questionId] ?? [];
+    const userAnswer = this.answers.get(questionId) ?? new Set();
+
+    return (
+      correctAnswer.length === userAnswer.size &&
+      correctAnswer.every((c) => userAnswer.has(c))
+    );
+  }
+
+  @action
+  getQuizResult(quiz) {
+    const questions = quiz?.questions ?? [];
+    const quizId = quiz?.id;
+
+    return questions.map((q) => {
+      const userAnswers = this.answers.get(q.id) ?? new Set();
+      const isCorrect = this.isCorrectAnswer(quizId, q.id);
+
+      return {
+        question: q.text,
+        userAnswer: [...userAnswers].join(', '),
+        isCorrect,
+      };
+    });
+  }
+
+  /**
+   * Возвращает результат квиза через Web Worker
+   * @param {object} quiz
+   * @returns {Promise<Array<{question: string, userAnswer: string, isCorrect: boolean}>>}
+   */
+  @action
+  async getQuizResultAsync(quiz) {
+    const questions = quiz?.questions ?? [];
+    const quizId = quiz?.id;
+
+    // конвертируем Map -> Object
+    const answersObj = {};
+    this.answers.forEach((value, key) => {
+      answersObj[key] = [...value];
+    });
+
+    const correctAnswers = quizCorrectAnswers[quizId] ?? {};
+
+    return new Promise((resolve, reject) => {
+      const worker = new Worker(ROUTE_QUIZ_WORKER);
+
+      worker.onmessage = (e) => {
+        resolve(e.data);
+        worker.terminate();
+      };
+
+      worker.onerror = (e) => {
+        reject(e.message);
+        worker.terminate();
+      };
+
+      worker.postMessage({
+        questions,
+        answers: answersObj,
+        correctAnswers,
+      });
+    });
+  }
+}
+

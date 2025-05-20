@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="page-title">Выбери квиз</div>
+
+  <div local-class="quiz-list">
+    {{#each this.quizzes as |quiz|}}
+      <QuizCard::Item
+        @name={{quiz.name}}
+        @id={{quiz.id}}
+        @onOpenQuizAction={{this.openQuiz}}
+      />
+    {{/each}}
+  </div>
+</div>
+
+{{outlet}}

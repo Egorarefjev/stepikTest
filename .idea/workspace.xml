@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ember-cli-build.js" beforeDir="false" afterPath="$PROJECT_DIR$/ember-cli-build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="Добавлен webworker">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/index/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/quiz/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/quiz/result/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/result/route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/quiz/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +20,37 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1747646016" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1747646015" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="2xJ0Yug7PotH9Vjc8LFsTarVwAY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,17 +63,33 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/egorarefev/WebstormProjects/stepikTest/app/components/ui/loader",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/egorarefev/WebstormProjects/stepikTest/node_modules/prettier",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "watcher.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components/ui/loader" />
+      <recent name="$PROJECT_DIR$/app/routes/quiz/result" />
+      <recent name="$PROJECT_DIR$/app/routes/result" />
+      <recent name="$PROJECT_DIR$/app/components/ui/button" />
+      <recent name="$PROJECT_DIR$/app/components/ui/checkbox" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates" />
+      <recent name="$PROJECT_DIR$/app/index" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,6 +100,70 @@
       <updated>1747640919726</updated>
       <workItem from="1747640920877" duration="1824000" />
     </task>
+    <task id="LOCAL-00001" summary="the config has been configured">
+      <created>1747645873208</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747645873208</updated>
+    </task>
+    <task id="LOCAL-00002" summary="- изолировал стили">
+      <created>1747653344511</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747653344511</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Добавил сервис для работы с квизом, добавил фейковую дату">
+      <created>1747677778548</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747677778548</updated>
+    </task>
+    <task id="LOCAL-00004" summary="добавил компоненты ui">
+      <created>1747679570514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747679570514</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Добавлены страницы результата + первичная форма проверки">
+      <created>1747682205839</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747682205839</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Добавлена проверка ответов">
+      <created>1747684225967</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747684225967</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor">
+      <created>1747731877025</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747731877025</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Добавил задержку на последний роут с результатами">
+      <created>1747735200948</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747735200948</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Добавлен webworker">
+      <created>1747736226778</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747736226778</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,5 +179,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="the config has been configured" />
+    <MESSAGE value="- изолировал стили" />
+    <MESSAGE value="Добавил сервис для работы с квизом, добавил фейковую дату" />
+    <MESSAGE value="добавил компоненты ui" />
+    <MESSAGE value="Добавлены страницы результата + первичная форма проверки" />
+    <MESSAGE value="Добавлена проверка ответов" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="Добавил задержку на последний роут с результатами" />
+    <MESSAGE value="Добавлен webworker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен webworker" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

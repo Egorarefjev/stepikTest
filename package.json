@@ -39,6 +39,8 @@
     "ember-cli-sass": "^11.0.1",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
+    "ember-css-modules": "^2.1.1",
+    "ember-css-modules-sass": "^1.1.0",
     "ember-data": "~4.4.0",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.1.1",
@@ -68,5 +70,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "@ember/render-modifiers": "^3.0.0"
   }
 }
