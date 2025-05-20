@@ -9,7 +9,6 @@
           <div local-class="quiz__options">
             {{#each question.choices as |choice|}}
               <Ui::Checkbox
-                @checked={{true}}
                 @onChange={{fn this.onToggleAnswer question.id choice}}
                 @label={{choice}}
                 local-class="quiz__option"
