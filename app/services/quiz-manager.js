@@ -15,6 +15,9 @@ export default class QuizManagerService extends Service {
    */
   @action
   getQuizzes() {
+    //тут должен быть метод получения списка квизов и присваивания результата в this.quizzes
+    //так же при сложных трансформациях лучше сделать отдельный класс (доменную модель)
+    // и map'ом создавать новые экземпляры
     this.quizzes = quizzesFromServer?.map(({ id, name, description }) => ({
       id,
       name,
