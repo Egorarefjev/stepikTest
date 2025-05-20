@@ -4,8 +4,7 @@ import { inject as service } from '@ember/service';
 
 
 class Model {
-  @tracked
-  quiz;
+  @tracked quiz;
 
   constructor(quiz) {
     this.quiz = quiz;
@@ -15,14 +14,14 @@ class Model {
 
 export default class QuizRoute extends Route {
 
-  @service
-  quizManager;
+  @service quizManager;
+
 
   async model(params) {
-
     const id = params?.id;
     const quiz = await this.quizManager.getQuizById(id);
 
     return new Model(quiz);
   }
+
 }

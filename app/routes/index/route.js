@@ -4,8 +4,7 @@ import { inject as service } from '@ember/service';
 
 
 class Model {
-  @tracked
-  quizzes = [];
+  @tracked quizzes = [];
 
   constructor(quizzes) {
     this.quizzes = quizzes;
@@ -15,8 +14,7 @@ class Model {
 
 export default class IndexRoute extends Route {
 
-  @service
-  quizManager;
+  @service quizManager;
 
   async model() {
     // await тут не нужен, но при реальных условиях нужен

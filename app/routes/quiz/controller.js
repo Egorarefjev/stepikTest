@@ -5,11 +5,8 @@ import { ROUTE_QUIZ_INDEX, ROUTE_QUIZ_RESULT } from "../../helpers/routes";
 
 export default class QuizController extends Controller {
 
-  @service
-  router;
-
-  @service
-  quizManager;
+  @service router;
+  @service quizManager;
 
   get name() {
     return this.model.quiz?.name ?? '';
