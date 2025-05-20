@@ -1,5 +1,5 @@
 import Route from '@ember/routing/route';
-import {ROUTE_QUIZ} from "../../../helpers/routes";
+import { ROUTE_QUIZ } from "../../../helpers/routes";
 
 export default class QuizResultRoute extends Route {
 

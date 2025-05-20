@@ -1,30 +1,31 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
-import {quizCorrectAnswers} from "../../../data/quizzes";
+import { action } from '@ember/object';
+import { ROUTE_INDEX, ROUTE_QUIZ_INDEX } from "../../../helpers/routes";
 
 export default class QuizResultsController extends Controller {
   @service quizManager;
+  @service router;
+
+  get quizId() {
+    return this.model?.quiz?.id;
+  }
 
   get result() {
-    const quiz = this.model.quiz ?? {};
-    const questions = quiz.questions ?? [];
-    const quizId = quiz.id;
-
-    return questions.map((question) => {
-      const correctAnswer = quizCorrectAnswers[quizId]?.[question.id] ?? [];
-      const userAnswers = this.quizManager.answers.get(question.id) ?? new Set();
-      const isCorrect = this.quizManager.isCorrectAnswer(quizId, question.id);
-
-      return {
-        question: question.text,
-        userAnswer: [...userAnswers].join(', '),
-        correctAnswer: correctAnswer.join(', '),
-        isCorrect,
-      };
-    });
+    return this.quizManager.getQuizResult(this.model?.quiz);
   }
 
   get correctCount() {
-    return this.result.filter(r => r.isCorrect).length;
+    return this.result.filter(item => item.isCorrect).length;
+  }
+
+  @action
+  onClickRestartTest() {
+    this.router.transitionTo(ROUTE_QUIZ_INDEX, this.quizId);
+  }
+
+  @action
+  onClickGoToListQuizzes() {
+    this.router.transitionTo(ROUTE_INDEX);
   }
 }

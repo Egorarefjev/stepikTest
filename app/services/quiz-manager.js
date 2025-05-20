@@ -79,6 +79,7 @@ export default class QuizManagerService extends Service {
    * @param {string} questionId
    * @returns {boolean}
    */
+  @action
   isCorrectAnswer(quizId, questionId) {
     const correctAnswer = quizCorrectAnswers[quizId]?.[questionId] ?? [];
     const userAnswer = this.answers.get(questionId) ?? new Set();
@@ -87,6 +88,23 @@ export default class QuizManagerService extends Service {
       correctAnswer.length === userAnswer.size &&
       correctAnswer.every((c) => userAnswer.has(c))
     );
+  }
+
+  @action
+  getQuizResult(quiz) {
+    const questions = quiz?.questions ?? [];
+    const quizId = quiz?.id;
+
+    return questions.map((q) => {
+      const userAnswers = this.answers.get(q.id) ?? new Set();
+      const isCorrect = this.isCorrectAnswer(quizId, q.id);
+
+      return {
+        question: q.text,
+        userAnswer: [...userAnswers].join(', '),
+        isCorrect,
+      };
+    });
   }
 }
 

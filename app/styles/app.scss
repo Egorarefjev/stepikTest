@@ -1,2 +1,19 @@
 @import "variables";
-@import "mixins";
+
+:global(.page-title) {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+body {
+  max-width: $bs-breakpoint-xxl;
+  margin: 0 auto;
+  padding: var(--spacer-m);
+}
+
+@media (max-width: $bs-breakpoint-sm) {
+  body {
+    padding: var(--spacer-s);
+  }
+}
