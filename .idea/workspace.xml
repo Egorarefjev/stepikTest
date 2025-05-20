@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="refactor">
-      <change afterPath="$PROJECT_DIR$/app/components/ui/loader/component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ui/loader/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/ui/loader/template.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/loading.hbs" afterDir="false" />
+    <list default="true" id="2b701a88-c93c-47a5-a825-5eaff632d46d" name="Changes" comment="Добавил задержку на последний роут с результатами">
+      <change afterPath="$PROJECT_DIR$/public/workers/quiz-checker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/quiz/result/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/result/route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/environment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/quiz/result/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/result/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/quiz/result/template.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/quiz/result/template.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/quiz-manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/quiz-manager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1747731877025</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавил задержку на последний роут с результатами">
+      <created>1747735200948</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747735200948</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +181,8 @@
     <MESSAGE value="Добавлены страницы результата + первичная форма проверки" />
     <MESSAGE value="Добавлена проверка ответов" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="Добавил задержку на последний роут с результатами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил задержку на последний роут с результатами" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

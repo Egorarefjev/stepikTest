@@ -3,6 +3,8 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { quizzesFromServer, quizCorrectAnswers } from "../data/quizzes";
 
+const ROUTE_QUIZ_WORKER = '/workers/quiz-checker.js';
+
 export default class QuizManagerService extends Service {
 
   @tracked quizzes;
@@ -104,6 +106,45 @@ export default class QuizManagerService extends Service {
         userAnswer: [...userAnswers].join(', '),
         isCorrect,
       };
+    });
+  }
+
+  /**
+   * Возвращает результат квиза через Web Worker
+   * @param {object} quiz
+   * @returns {Promise<Array<{question: string, userAnswer: string, isCorrect: boolean}>>}
+   */
+  @action
+  async getQuizResultAsync(quiz) {
+    const questions = quiz?.questions ?? [];
+    const quizId = quiz?.id;
+
+    // конвертируем Map -> Object
+    const answersObj = {};
+    this.answers.forEach((value, key) => {
+      answersObj[key] = [...value];
+    });
+
+    const correctAnswers = quizCorrectAnswers[quizId] ?? {};
+
+    return new Promise((resolve, reject) => {
+      const worker = new Worker(ROUTE_QUIZ_WORKER);
+
+      worker.onmessage = (e) => {
+        resolve(e.data);
+        worker.terminate();
+      };
+
+      worker.onerror = (e) => {
+        reject(e.message);
+        worker.terminate();
+      };
+
+      worker.postMessage({
+        questions,
+        answers: answersObj,
+        correctAnswers,
+      });
     });
   }
 }
