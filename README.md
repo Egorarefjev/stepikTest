@@ -1,57 +1,77 @@
-# stepik-test
+# Stepik Quiz Test
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Прототип SPA-интерфейса для прохождения квиза с выбором ответа. Реализовано на Ember.js (LTS), с использованием Web Worker для асинхронной проверки ответов.
 
-## Prerequisites
+## 📌 Задание
 
-You will need the following things properly installed on your computer.
+Реализовать:
+- выбор ответов на вопросы (choice quiz);
+- отправку решения;
+- отображение результата;
+- вынести проверку в отдельный модуль с возможностью переноса на сервер;
+- *опционально*: использовать web worker, ember-data, разные типы интерфейсов, лоадеры.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [Yarn](https://yarnpkg.com/)
-* [Ember CLI](https://cli.emberjs.com/release/)
-* [Google Chrome](https://google.com/chrome/)
+## 🚀 Реализовано
 
-## Installation
+- ✅ Страница прохождения квиза (`/quiz`)
+- ✅ Компоненты `Ui::Checkbox`, `Ui::Button`, `Ui::Loader`
+- ✅ Асинхронная проверка решения в Web Worker
+- ✅ Переход к результату (`/quiz/result`)
+- ✅ Визуальная индикация правильности ответов
+- ✅ Собственный SCSS с компонентной изоляцией
+- ✅ Краткая архитектура с выносом логики в сервис `quiz-manager`
 
-* `git clone <repository-url>` this repository
-* `cd stepik-test`
-* `yarn install`
+## ⚙️ Архитектура
 
-## Running / Development
+- `routes/quiz/` — основной интерфейс квиза
+- `routes/quiz/result/` — вывод результата
+- `services/quiz-manager.js` — хранение и обработка ответов
+- `public/workers/quiz-checker.js` — web worker для проверки
+- `data/quizzes.js` — имитация серверных данных
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+## 🛠 Установка
 
-### Code Generators
+```bash
+git clone <repo>
+npm install
+ember serve
+```
 
-Make use of the many generators for code, try `ember help generate` for more details
 
-### Running Tests
+## 🧪 Тестирование
 
-* `ember test`
-* `ember test --server`
+> Пока не реализовано
 
-### Linting
+Планируемое покрытие:
+- Unit-тест `quiz-manager`
+- Acceptance-тест: выбор → отправка → просмотр результата
 
-* `yarn lint`
-* `yarn lint:fix`
+## 🧱 Стек
 
-### Building
+- Ember.js (LTS)
+- Glimmer components
+- SCSS (модули)
+- Web Worker API
+- Ember Router
+- `@tracked`, `@service`, `@action`
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+## 🧭 Возможности для развития
 
-### Deploying
+- Поддержка нескольких типов квизов
+- Использование Ember Data для хранения результатов
+- Сохранение состояния в `localStorage`
+- Лоадеры, отложенная валидация, UX-индикации
+- Интеграция с сервером (вынесение логики проверки)
+- CI/CD, покрытие тестами
 
-Specify what it takes to deploy your app.
+## ⚠️ Известные ограничения
 
-## Further Reading / Useful Links
+- Отсутствуют тесты
+- Нет валидации ввода
+- Нет обработки ошибок/перезагрузки страницы
+- Не используется `ember-data`
 
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://cli.emberjs.com/release/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+## 👤 Автор
+
+Егор Арефьев  
+Frontend-разработчик (Ember.js, UI/UX)
